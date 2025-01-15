@@ -25,6 +25,59 @@ html {
     width: 20%;
 }
 
+/* .nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    z-index: 1001;
+}
+
+.hamburger {
+    display: block;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    background: white;
+    width: 2em;
+    height: 3px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+}
+
+.hamburger::before { top: 6px; }
+.hamburger::after { bottom: 6px; }
+
+.nav-open .hamburger {
+    transform: rotate(45deg);
+}
+
+.nav-open .hamburger::before {
+    transform: rotate(90deg) translate(-6px);
+}
+
+.nav-open .hamburger::after {
+    opacity: 0;
+}
+
+*/
+
+/* Update these specific styles in your CSS */
+
 .lists > ul {
     display: flex;
     flex-direction: column;
@@ -34,6 +87,83 @@ html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 24px;
     font-size: 16px;
+} 
+
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    z-index: 1001;
+}
+
+.hamburger {
+    display: block;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    background: white;
+    width: 2em;
+    height: 3px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+}
+
+.hamburger::before { top: 6px; }
+.hamburger::after { bottom: 6px; }
+
+/* Updated mobile styles */
+@media screen and (max-width: 922px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .lists {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #bd5d38;
+        padding-top: 80px; /* Space for the header */
+        padding-bottom: 20px;
+    }
+
+    .lists.nav-open {
+        display: block;
+    }
+
+    .navigation.nav-open .hamburger {
+        transform: rotate(45deg);
+    }
+
+    .navigation.nav-open .hamburger::before {
+        transform: rotate(90deg) translateX(-6px);
+    }
+
+    .navigation.nav-open .hamburger::after {
+        opacity: 0;
+    }
+
+    .lists ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
 }
 
 ul {
@@ -55,6 +185,7 @@ img {
 
 .hero {
     overflow-y: scroll;
+    width: 80%;
 }
 
 .name {
@@ -74,15 +205,6 @@ img {
     color: #bd5d38;
 }
 
-.imagetwo {
-    height: 50px;
-    width: 50px;
-    background-color: #495057;
-    margin-top: 60px;
-    margin-bottom: 5px;
-    border-radius: 50px;
-}
-
 #firstbox {
     border-bottom: 1px solid rgba(0,0,0,0.1);
     padding: 48px;
@@ -91,55 +213,6 @@ img {
 
 .firstbox2 {
     padding: 48px;
-}
-
-#sectiontwo {
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-    padding: 48px;
-    width: 100%;
-}
-
-.seniorweb {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.seniorweb2 {
-    width: 607px;
-}
-
-.webdeveloper {
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.webdeveloper2 {
-    width: 607px;
-}
-
-.juniorweb {
-    display: flex;
-    margin-top: 30px;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.juniorweb2 {
-    width: 607px;
-}
-
-.webdesginintern {
-    display: flex;
-    margin-top: 30px;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.webdesginintern2 {
-    width: 607px;
 }
 
 #educationsection {
@@ -198,6 +271,7 @@ img {
     color: #868e96;
     font-size: 48px;
     gap: 21px;
+    flex-wrap: wrap;
 }
 
 .devicons > ul > li > i:hover {
@@ -255,21 +329,38 @@ img {
         height: auto;
         padding: 1rem;
         z-index: 1000;
+        justify-content: flex-start;
+    }
+
+    .nav-toggle {
+        display: block;
     }
 
     .lists {
-        margin-left: 1rem;
+        display: none;
+        width: 100%;
+        margin-top: 80px;
+        background-color: #bd5d38;
+        padding: 1rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .lists.nav-open {
+        display: block;
     }
 
     .lists ul {
-        flex-direction: row;
-        gap: 1rem;
+        flex-direction: column;
         align-items: center;
+        gap: 1.5rem;
     }
 
     .profile-img {
         width: 5rem;
         height: 5rem;
+        margin-right: auto;
     }
 
     .hero {
@@ -295,12 +386,38 @@ img {
     }
 
     .devicons > ul {
-        flex-wrap: wrap;
         justify-content: center;
     }
 
     .uni, .iscool {
         flex-direction: column;
         gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .name {
+        font-size: 36px;
+    }
+
+    .location {
+        font-size: 16px;
+    }
+
+    .profile-img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .devicons > ul {
+        font-size: 36px;
+        gap: 15px;
+    }
+
+    .fa {
+        padding: 15px;
+        height: 45px;
+        width: 45px;
+        font-size: 18px;
     }
 }
