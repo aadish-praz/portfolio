@@ -1,0 +1,306 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    background-color: #bd5d38;
+    height: 100vh;
+    width: 20%;
+}
+
+.lists > ul {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    gap: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 24px;
+    font-size: 16px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    border: 10px solid rgba(0,0,0,0.1);
+}
+
+.hero {
+    overflow-y: scroll;
+}
+
+.name {
+    color: #bd5d38;
+    font-family: 'Saira ExtraCondensed';
+    font-size: 96px;
+}
+
+.location {
+    color: #868e96;
+    font-size: 24px;
+    font-family: 'Saira ExtraCondensed';
+    margin-bottom: 25px;
+}
+
+.location > a {
+    color: #bd5d38;
+}
+
+.imagetwo {
+    height: 50px;
+    width: 50px;
+    background-color: #495057;
+    margin-top: 60px;
+    margin-bottom: 5px;
+    border-radius: 50px;
+}
+
+#firstbox {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 48px;
+    width: 100%;
+}
+
+.firstbox2 {
+    padding: 48px;
+}
+
+#sectiontwo {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 48px;
+    width: 100%;
+}
+
+.seniorweb {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.seniorweb2 {
+    width: 607px;
+}
+
+.webdeveloper {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.webdeveloper2 {
+    width: 607px;
+}
+
+.juniorweb {
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.juniorweb2 {
+    width: 607px;
+}
+
+.webdesginintern {
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.webdesginintern2 {
+    width: 607px;
+}
+
+#educationsection {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    width: 100%;
+    padding: 48px;
+}
+
+.uni {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.iscool {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#skillshow {
+    padding: 48px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.tick {
+    list-style: none;
+    font-family: 'Muli';
+    color: #868e96;
+}
+
+.tick li:before {
+    content: '✓';
+    padding: 10px;
+    color: #868e96;
+}
+
+#intrests {
+    padding: 48px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+#awards {
+    padding: 48px;
+}
+
+.certifications {
+    line-height: 24px;
+    font-family: 'Muli';
+    font-size: 16px;
+    color: #868e96;
+}
+
+.devicons > ul {
+    display: flex;
+    color: #868e96;
+    font-size: 48px;
+    gap: 21px;
+}
+
+.devicons > ul > li > i:hover {
+    color: #bd5d38;
+}
+
+.socialicons > ul {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 24px;
+    color: #868e96;
+    gap: 2rem;
+}
+
+.fa {
+    padding: 20px;
+    height: 60px;
+    width: 60px;
+}
+
+.socialicons > ul > li > a:hover {
+    color: #bd5d38;
+}
+
+.fa-instagram {
+    background: #495057;
+    color: white;
+    border-radius: 100%
+}
+
+.fa-linkedin {
+    background: #495057;
+    color: white;
+    border-radius: 100%;
+}
+
+.fa-github {
+    background: #495057;
+    color: white;
+    border-radius: 100%;
+}
+
+@media screen and (max-width: 922px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navigation {
+        position: fixed;
+        top: 0;
+        left: 0;
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+        z-index: 1000;
+    }
+
+    .lists {
+        margin-left: 1rem;
+    }
+
+    .lists ul {
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .profile-img {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .hero {
+        margin-top: 120px;
+        width: 100%;
+        padding: 24px;
+    }
+
+    #firstbox, #sectiontwo, #educationsection, #skillshow, #intrests {
+        padding: 24px;
+    }
+
+    .firstbox2 {
+        padding: 24px 0;
+    }
+
+    .name {
+        font-size: 48px;
+    }
+
+    .location {
+        font-size: 18px;
+    }
+
+    .devicons > ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .uni, .iscool {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
